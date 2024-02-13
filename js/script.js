@@ -41,12 +41,20 @@ buttonYes.addEventListener('click', () => {
   badtzMaruImage.src = 'https://i.pinimg.com/736x/f1/69/5a/f1695aacc46a4203fcfcd8b2ec805a07.jpg';
 });
 
+const audio_no = document.getElementById("audio-no");
+const audio_si = document.getElementById("audio-si");
+
+document.getElementById("no").addEventListener("click", function() {
+  audio_no.play();
+});
+
 document.getElementById("yes").addEventListener("click", function() {
+  audio_si.play();
   this.disabled = true;
   
   // Establecer un retraso de 5 segundos antes de redirigir a otra página
   setTimeout(function() {
       window.location.href = "carta.html";
-  }, 3000);
+  }, 6000);
 });
 
